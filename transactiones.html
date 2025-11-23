@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>-:: Billetera Digital ::-- Movimientos</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <!-- ID correcto para script.js -->
+  <body id="page-transacciones">
+    <section class="container mt-3 text-center">
+      <h2>Últimos Movimientos</h2>
+
+      <div class="mb-3 col-7 mx-auto">
+        <label for="filtroTipo" class="form-label">Filtrar por Tipo:</label>
+        <select class="form-select" id="filtroTipo">
+          <option value="todos" selected>Todos los Movimientos</option>
+          <option value="Depósito">Depósitos</option>
+          <option value="Envío">Envíos de Dinero</option>
+        </select>
+      </div>
+      <div class="d-grid gap-2 col-7 mx-auto">
+        <br />
+        <ol class="list-group list-group-numbered" id="lista-movimientos"></ol>
+      </div>
+
+      <div class="d-grid gap-2 col-6 mx-auto mt-3">
+        <a href="menu.html" class="btn btn-primary nav-btn"
+          >Volver al Menú Principal</a
+        >
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js" type="module"></script>
+  </body>
+</html>
