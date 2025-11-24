@@ -6,16 +6,17 @@
 body {
     background-color: #f8f9fa; /* Color de fondo claro */
     font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 50px;
+    /* CORRECCIÓN 1: Eliminamos el text-align: center general y ajustamos el padding-top para el Navbar */
+    text-align: left; /* Generalmente, el texto debe estar alineado a la izquierda */
+    padding-top: 56px; /* Ajuste preciso para el Navbar fijo */
 }
 
 /* -------------------------------------- */
 /* ESTILOS DEL MENÚ Y LISTAS (Existentes) */
 /* -------------------------------------- */
 .container {
-    /* Puedes dejar este max-width, pero para login usaremos el centrado */
-    max-width: 800px;
+    /* Mantenemos tu max-width: 800px */
+    max-width: 800px; 
 }
 .list-group-item-primary {
     border: 2px solid #007bff;
@@ -29,23 +30,50 @@ body {
 }
 
 /* -------------------------------------- */
-/* ESTILOS ESPECÍFICOS DE LOGIN  */
+/* ESTILOS ESPECÍFICOS DE LOGIN */
 /* -------------------------------------- */
 
-/* 1. Habilita el centrado vertical al 100% de la altura de la vista */
-html, body {
+/* CORRECCIÓN 2: Estos estilos son SOLO para login.html, pero los modificamos para que el formulario quede arriba. */
+/* Se aplica solo cuando el body tiene el ID específico de login */
+#page-login {
+    /* Aseguramos que el login no tenga el padding-top del navbar */
+    padding-top: 0;
+}
+
+#page-login html, #page-login body {
+    /* Esto es correcto para centrar el contenido de la página de login horizontalmente */
     height: 100%;
 }
 
-/* 2. Define el ancho máximo del contenedor del formulario para hacerlo compacto */
 .login-container {
-    /* Ancho máximo para que el formulario se vea corto en pantallas grandes */
+    /* Mantenemos tu max-width: 700px */
     max-width: 700px; 
-    /* Asegura que el contenedor centrado del login no tenga padding extra si no se usa Bootstrap container */
     padding: 0 15px; 
 }
 
-/* 3. Asegura que el contenedor flexbox que centra el login cubra toda la altura */
-.min-vh-100 {
-    min-height: 100vh;
+/* -------------------------------------- */
+/* ESTILOS ADICIONALES (Nuevos de la Tarjeta y Navbar) */
+/* -------------------------------------- */
+
+/* Mejoras visuales para el Saldo */
+.saldo-card {
+    background-color: #e9f7fe; /* Fondo suave para destacar */
+    border: none;
+    transition: transform 0.2s;
+}
+
+/* Efecto al pasar el ratón (opcional) */
+.saldo-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Estilo para los botones de las opciones (Envío, Depósito) */
+.option-card {
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+.option-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
