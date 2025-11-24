@@ -1,9 +1,22 @@
 /* assets/css/style.css */
+
+/* -------------------------------------- */
+/* ESTILOS GENERALES Y DE BOOTSTRAP */
+/* -------------------------------------- */
 body {
     background-color: #f8f9fa; /* Color de fondo claro */
+    font-family: Arial, sans-serif;
+    /* CORRECCIÓN 1: Eliminamos el text-align: center general y ajustamos el padding-top para el Navbar */
+    text-align: left; /* Generalmente, el texto debe estar alineado a la izquierda */
+    padding-top: 56px; /* Ajuste preciso para el Navbar fijo */
 }
+
+/* -------------------------------------- */
+/* ESTILOS DEL MENÚ Y LISTAS (Existentes) */
+/* -------------------------------------- */
 .container {
-    max-width: 600px;
+    /* Mantenemos tu max-width: 800px */
+    max-width: 800px; 
 }
 .list-group-item-primary {
     border: 2px solid #007bff;
@@ -14,4 +27,53 @@ body {
 }
 .nav-btn.d-block {
     width: 100%;
+}
+
+/* -------------------------------------- */
+/* ESTILOS ESPECÍFICOS DE LOGIN */
+/* -------------------------------------- */
+
+/* CORRECCIÓN 2: Estos estilos son SOLO para login.html, pero los modificamos para que el formulario quede arriba. */
+/* Se aplica solo cuando el body tiene el ID específico de login */
+#page-login {
+    /* Aseguramos que el login no tenga el padding-top del navbar */
+    padding-top: 0;
+}
+
+#page-login html, #page-login body {
+    /* Esto es correcto para centrar el contenido de la página de login horizontalmente */
+    height: 100%;
+}
+
+.login-container {
+    /* Mantenemos tu max-width: 700px */
+    max-width: 700px; 
+    padding: 0 15px; 
+}
+
+/* -------------------------------------- */
+/* ESTILOS ADICIONALES (Nuevos de la Tarjeta y Navbar) */
+/* -------------------------------------- */
+
+/* Mejoras visuales para el Saldo */
+.saldo-card {
+    background-color: #e9f7fe; /* Fondo suave para destacar */
+    border: none;
+    transition: transform 0.2s;
+}
+
+/* Efecto al pasar el ratón (opcional) */
+.saldo-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Estilo para los botones de las opciones (Envío, Depósito) */
+.option-card {
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+.option-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

@@ -5,7 +5,6 @@ import { mostrarAlertaBootstrap } from './ui.js';
 export function validarLogin(event) {
     // Previene el envío tradicional del formulario
     event.preventDefault(); 
-    
     const email = $("#inputEmail").val() || ""; 
     const pass  = $("#inputPassword").val() || "";
     
@@ -23,7 +22,6 @@ export function validarLogin(event) {
         mostrarAlertaBootstrap("Validación correcta. Redirigiendo...", "success");
         // Redirección al menú principal
         window.location.href = "menu.html"; 
-        
     } else {
         mostrarAlertaBootstrap("Email o contraseña incorrectos.", "danger");
     }
