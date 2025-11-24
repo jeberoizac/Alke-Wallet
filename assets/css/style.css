@@ -1,9 +1,21 @@
 /* assets/css/style.css */
+
+/* -------------------------------------- */
+/* ESTILOS GENERALES Y DE BOOTSTRAP */
+/* -------------------------------------- */
 body {
     background-color: #f8f9fa; /* Color de fondo claro */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
 }
+
+/* -------------------------------------- */
+/* ESTILOS DEL MENÚ Y LISTAS (Existentes) */
+/* -------------------------------------- */
 .container {
-    max-width: 600px;
+    /* Puedes dejar este max-width, pero para login usaremos el centrado */
+    max-width: 800px;
 }
 .list-group-item-primary {
     border: 2px solid #007bff;
@@ -14,4 +26,26 @@ body {
 }
 .nav-btn.d-block {
     width: 100%;
+}
+
+/* -------------------------------------- */
+/* ESTILOS ESPECÍFICOS DE LOGIN  */
+/* -------------------------------------- */
+
+/* 1. Habilita el centrado vertical al 100% de la altura de la vista */
+html, body {
+    height: 100%;
+}
+
+/* 2. Define el ancho máximo del contenedor del formulario para hacerlo compacto */
+.login-container {
+    /* Ancho máximo para que el formulario se vea corto en pantallas grandes */
+    max-width: 700px; 
+    /* Asegura que el contenedor centrado del login no tenga padding extra si no se usa Bootstrap container */
+    padding: 0 15px; 
+}
+
+/* 3. Asegura que el contenedor flexbox que centra el login cubra toda la altura */
+.min-vh-100 {
+    min-height: 100vh;
 }
