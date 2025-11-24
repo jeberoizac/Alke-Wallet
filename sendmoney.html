@@ -43,11 +43,12 @@
             </div>
         </div>
     </nav>
-<section class="container mt-3 text-center">
-    <h2>Enviar Dinero</h2>
+<section class="container mt-3 text-center ">
+  <div class="col-md-6 mx-auto"> 
+    <h2 class="mt-4 mb-3">Enviar Dinero</h2>
 
     <!-- Buscador -->
-    <form id="searchForm" class="mb-3">
+    <form id="searchForm" class="mb-3 ">
       <input
         type="text"
         class="form-control mb-2"
@@ -57,13 +58,13 @@
     </form>
 
     <!-- Botón que abre modal -->
-    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalContacto">
+    <button class="btn btn-primary mb-1 w-100 btn-lg" data-bs-toggle="modal" data-bs-target="#modalContacto">
       Agregar nuevo Contacto
     </button>
 
     <!-- Lista de contactos -->
-    <div class="container mt-4">
-      <h3>Contactos</h3>
+    <div class="container mt-4 p-0">
+      <h3 class="mb-4 mt-0">Contactos</h3>
       <ul class="list-group" id="listaContactos"></ul>
 
       <button class="btn btn-success mt-3" id="btnEnviar" style="display: none;">Enviar Dinero</button>
@@ -72,8 +73,9 @@
     </div>
 
     <div class="mt-4">
-      <a href="menu.html" class="btn btn-secondary">Volver al Menú Principal</a>
+      <a href="menu.html" class="btn btn-secondary w-100 btn-lg mb-3">Volver al Menú Principal</a>
     </div>
+  </div>
 </section>
 
 <!-- MODAL CONTACTO -->
