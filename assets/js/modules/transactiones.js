@@ -2,6 +2,8 @@
 import { DataService } from './data.js';
 import { getTipoTransaccion } from './ui.js';
 
+// Define el número máximo de movimientos a mostrar
+const MAX_MOVIMIENTOS = 10; //Constante para el límite de las transaciones -pendiente de uso
 // Variable privada del módulo para guardar todos los movimientos
 let todosLosMovimientos = [];
 
